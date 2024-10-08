@@ -27,7 +27,6 @@ h1{
     max-height: 55vh;
     overflow: auto;
 }
-
 input{
     color: #1e93a7;
     background-color: rgba(0, 255, 255, 0.237);
@@ -35,6 +34,10 @@ input{
     padding: 10px;
     border-radius: 5px;
     font-family: 'Telma-Variable';
+}
+input:focus {
+    outline: 2px dashed #1e93a7; /* Change the outline color */
+    outline-offset: 0; /* Ensure the outline does not affect the element's size */
 }
 button{
     color: #1e93a7;
@@ -45,6 +48,10 @@ button{
     margin-left: 10px;
     font-family: 'Telma-Variable';
 }
+button:hover{
+    background-color: #1e93a7;
+    color: #fff9c7;
+}
 ul{
     margin: 0;
     padding: 0;
@@ -54,6 +61,7 @@ li{
     color:#1e93a7;
     margin-block: 20px;
     font-weight: 500;
+    text-wrap: wrap;
 }
 li button{
     height: 30px;

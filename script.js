@@ -4,9 +4,13 @@ var todoList = document.getElementById("todo-list")
 
     function addEntry(){
         var entry = document.createElement("li")
-        // entry.textContent = input.value
-        entry.innerHTML = input.value+" "+"<button onclick='deleteEntry(event)'>-</button>"
-        todoList.append(entry)
+        if (input.value !== "") {
+            entry.innerHTML = input.value + " " + "<button onclick='deleteEntry(event)'>-</button>";
+            todoList.append(entry);
+        }
+        else{
+            alert("Enter a task to add to the list.")
+        }
     }
 
 
