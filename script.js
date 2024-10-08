@@ -5,7 +5,7 @@ var todoList = document.getElementById("todo-list")
     function addEntry(){
         var entry = document.createElement("li")
         // entry.textContent = input.value
-        entry.innerHTML = input.value+" "+"<button onclick='deleteEntry(event)'>Remove entry</button>"
+        entry.innerHTML = input.value+" "+"<button onclick='deleteEntry(event)'>-</button>"
         todoList.append(entry)
     }
 
