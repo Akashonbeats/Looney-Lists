@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+h1{
+    color: #11dbff;
+}
+.appwrapper{
+    padding: 20px;
+    background-color: #fff9c7;
+    border-radius: 40px;
+}
+.apptile{
+    background-color: #fff9c7;
+    padding: 20px;
+    border-style: dashed;
+    border-color: #11dbff;
+    border-radius: 20px;
+    min-width: 300px;
+    max-height: 45vh;
+    overflow: auto;
+}
