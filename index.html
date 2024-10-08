@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+    }
+    h1{
+        color: #11dbff;
+    }
+    .appwrapper{
+        padding: 20px;
+        background-color: #fff9c7;
+        border-radius: 40px;
+    }
+    .apptile{
+        background-color: #fff9c7;
+        padding: 20px;
+        border-style: dashed;
+        border-color: #11dbff;
+        border-radius: 20px;
+        min-width: 300px;
+        max-height: 45vh;
+        overflow: auto;
+    }
+</style>
+<body>
+<div class="appwrapper">
+    <div class="apptile">
+        <h1>Todo List</h1>
+
+        <input id="input-field">
+        <button onclick="addEntry(), clearField()">Add to list</button>
+
+        <ul id="todo-list">
+        </ul>
+    </div>
+</div>
+</body>
+
+<script>
+    var todoList = document.getElementById("todo-list")
+    var input = document.getElementById("input-field")
+    console.log(todoList)
+
+    function addEntry(){
+        var entry = document.createElement("li")
+        // entry.textContent = input.value
+        entry.innerHTML = input.value+" "+"<button onclick='deleteEntry(event)'>Remove entry</button>"
+        todoList.append(entry)
+    }
+
+
+    function deleteEntry(event){ //Fucntion to delete the entry
+        event.target.parentElement.remove()
+    }
+
+    function clearField(){ //Function to clear the input field value after appending it
+        input.value=""
+    }
+</script>
+</html>
