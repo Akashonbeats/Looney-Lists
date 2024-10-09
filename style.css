@@ -11,14 +11,24 @@
         filter: blur(0px);
     }
 }
-@keyframes scaleup {
+@keyframes slideinwards {
     0% {
         transform: translateX(-100px);
-        filter: blur(50px);
+        filter: blur(10px);
     }
     100% {
         transform: translateX(0px);
         filter: blur(0px);
+    }
+}
+@keyframes slideoutwards {
+    0% { 
+        transform: translateX(0px);
+        filter: blur(0px);
+    }
+    100% {
+        transform: translateX(-100px);
+        filter: blur(50px);
     }
 }
 body{
@@ -48,9 +58,11 @@ h1{
     border-style: dashed;
     border-color: #11dbff;
     border-radius: 20px;
-    min-width: 300px;
-    max-height: 55vh;
+    width: 307px;
+    height: 400px;
     overflow: auto;
+    scrollbar-width: none;
+    transition-duration: 2s;
 }
 input{
     user-select: none;
@@ -74,10 +86,19 @@ button{
     border-radius: 5px;
     margin-left: 10px;
     font-family: 'Telma-Variable';
+    transition-duration: 0.4s;
 }
 button:hover{
     background-color: rgba(0, 255, 255, 0.237);
     color: #1e93a7;
+    transition-duration: 0.4s;
+}
+h3{
+    color: #1e92a774;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 90px;
+    margin-inline: 20px;
 }
 ul{
     margin: 0;
@@ -90,7 +111,10 @@ li{
     font-weight: 500;
     text-wrap: wrap;
     user-select: none;
-    animation: cubic-bezier(0.68, -0.55, 0.27, 1.55) 1s scaleup;
+    animation: cubic-bezier(0.68, -0.55, 0.27, 1.55) 1s slideinwards;
+}
+li.removing {
+    animation: cubic-bezier(0.68, -0.55, 0.27, 1.55) 1s slideoutwards;
 }
 li button{
     height: 30px;
