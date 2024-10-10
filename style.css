@@ -41,10 +41,11 @@ body{
     font-family: 'Telma-Variable';
     font-weight: 900;
     background-color: #000000;
+    user-select: none;
+    -webkit-user-select: none;
 }
 h1{
     color: #1e93a7;
-    user-select: none;
 }
 .appwrapper{
     padding: 7px;
@@ -59,13 +60,21 @@ h1{
     border-color: #11dbff;
     border-radius: 20px;
     width: 315px;
-    height: 400px;
+    height: 500px;
     overflow: auto;
     scrollbar-width: none;
     transition-duration: 2s;
 }
+.inputwrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
 input{
-    user-select: none;
+    width: 200px;
     color: #1e93a7;
     background-color: rgba(0, 255, 255, 0.237);
     border: none;
@@ -78,11 +87,11 @@ input:focus {
     outline-offset: 0; /* Ensure the outline does not affect the element's size */
 }
 button{
-    user-select: none;
     color: #fff9c7;
     background-color: #1e93a7;
     border: none;
     padding: 10px;
+    font-size: 13px;
     border-radius: 5px;
     margin-left: 10px;
     font-family: 'Telma-Variable';
@@ -97,7 +106,7 @@ h3{
     color: #1e92a774;
     font-size: 2rem;
     text-align: center;
-    margin-top: 90px;
+    margin-top: 140px;
     margin-inline: 20px;
 }
 ul{
@@ -106,13 +115,19 @@ ul{
     list-style: none;
 }
 li{
+    user-select: text;
+    -webkit-user-select: text;
     color:#1e93a7;
     margin-block: 20px;
     font-weight: 500;
     text-wrap: wrap;
-    user-select: none;
     animation: cubic-bezier(0.68, -0.55, 0.27, 1.55) 1s slideinwards;
 }
+li::selection {
+    background: #1e93a7; /* Background color of the selection */
+    color: #fff9c7; /* Text color of the selection */
+    text-shadow: none; /* Optional: Removes text shadow if any */
+  }
 li.removing {
     animation: cubic-bezier(0.68, -0.55, 0.27, 1.55) 1s slideoutwards;
 }
@@ -122,6 +137,7 @@ li button{
     color: #1e93a7;
     background-color: rgba(0, 255, 255, 0.237);
     user-select: none;
+    -webkit-user-select: none;
 }
 footer{
     position: fixed;
