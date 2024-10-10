@@ -1,0 +1,47 @@
+body{
+    display: block;
+}
+h1{
+    text-align: center;
+    margin-top: 15vh;
+    font-size: 3rem;
+}
+.appwrapper{
+    padding: 7px;
+    background-color: #fff9c7;
+    border-radius: 0px;
+    width: 100vw;
+}
+.apptile{
+    height: 100dvh;
+    width: auto;
+}
+.inputwrapper{
+    display: block;
+    text-align: center;
+}
+input{
+    display: block;
+    width: calc(100% - 20px);
+    margin-bottom: 30px;
+    height: 50px;
+    border-radius: 25px;
+}
+button{
+    margin-left: 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    border-radius: 25px;
+}
+button:hover{
+    color: #fff9c7;
+    background-color: #1e93a7;
+    transition-duration: 0.4s;
+}
+button:active{
+    background-color: rgba(0, 255, 255, 0.237);
+    color: #1e93a7;
+    transition-duration: 0.4s;
+}
