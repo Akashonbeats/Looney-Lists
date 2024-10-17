@@ -38,7 +38,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Telma-Variable';
+    font-family: "Style Script", cursive;
     font-weight: 900;
     background-color: #000000;
     user-select: none;
@@ -59,7 +59,7 @@ h1{
     border-style: dashed;
     border-color: #11dbff;
     border-radius: 20px;
-    width: 315px;
+    width: 308px;
     height: 500px;
     overflow: auto;
     scrollbar-width: none;
@@ -67,26 +67,29 @@ h1{
 }
 .inputwrapper{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     margin-top: 20px;
     margin-bottom: 20px;
 
 }
 input{
+    font-family: "Gloria Hallelujah", cursive;
     width: 200px;
     color: #1e93a7;
     background-color: rgba(0, 255, 255, 0.237);
+    outline: 2px dashed #1e93a7;
+    outline-offset: 0;
     border: none;
     padding: 10px;
     border-radius: 5px;
-    font-family: 'Telma-Variable';
 }
 input:focus {
     outline: 2px dashed #1e93a7; /* Change the outline color */
     outline-offset: 0; /* Ensure the outline does not affect the element's size */
 }
 button{
+    font-family: "Gloria Hallelujah", cursive;
     color: #fff9c7;
     background-color: #1e93a7;
     border: none;
@@ -94,12 +97,13 @@ button{
     font-size: 13px;
     border-radius: 5px;
     margin-left: 10px;
-    font-family: 'Telma-Variable';
     transition-duration: 0.4s;
 }
 button:hover{
     background-color: rgba(0, 255, 255, 0.237);
     color: #1e93a7;
+    outline: 2px dashed #1e93a7;
+    outline-offset: 0;
     transition-duration: 0.4s;
 }
 h3{
@@ -115,6 +119,7 @@ ul{
     list-style: none;
 }
 li{
+    font-size: 1.3rem;
     user-select: text;
     -webkit-user-select: text;
     color:#1e93a7;
