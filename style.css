@@ -46,6 +46,27 @@ body{
 }
 h1{
     color: #1e93a7;
+    margin-bottom: 0;
+    font-size: 2.8rem;
+    text-shadow: 
+        -1px -1px 2px #fff9c7,  
+         1px -1px 2px #11dbff,
+        -1px  1px 2px #fff9c7,
+         1px  1px 2px #11dbff,
+        -2px -2px 2px #fff9c7,  
+         2px -2px 2px #11dbff,
+        -2px  2px 2px #fff9c7,
+         2px  2px 2px #11dbff,
+        -3px -3px 2px #fff9c7,  
+         3px -3px 2px #11dbff,
+        -3px  3px 2px #fff9c7,
+         3px  3px 2px #11dbff;
+}
+p{
+    color: #1e93a7;
+    margin-top: 10px;
+    font-weight: 500;
+    margin-bottom: 20px;
 }
 .appwrapper{
     padding: 7px;
@@ -110,7 +131,7 @@ h3{
     color: #1e92a774;
     font-size: 2rem;
     text-align: center;
-    margin-top: 140px;
+    margin-top: 120px;
     margin-inline: 20px;
 }
 ul{
