@@ -2,7 +2,7 @@ var todoList = document.getElementById("todo-list");
 var input = document.getElementById("input-field");
 var h3 = document.getElementById("h3");
 
-// Loading saved todos from local storage
+// Loading the todo list from local storage when loaded
 window.onload = function() {
     var savedTodos = JSON.parse(localStorage.getItem("todos")) || [];
     if (savedTodos.length > 0) {
@@ -10,7 +10,7 @@ window.onload = function() {
     }
     savedTodos.forEach(function(todo) {
         var entry = document.createElement("li");
-        entry.innerHTML = todo + " <button onclick='deleteEntry(event)'>-</button>";
+        entry.innerHTML = todo + " <button onclick='deleteEntry(event)'>X</button>";
         todoList.append(entry);
     });
 };
@@ -19,7 +19,7 @@ function addEntry() {
     var entry = document.createElement("li");
     h3.remove();
     if (input.value !== "") {
-        entry.innerHTML = input.value + " <button onclick='deleteEntry(event)'>-</button>";
+        entry.innerHTML = input.value + " <button onclick='deleteEntry(event)'>X</button>";
         todoList.append(entry);
         saveTodos();
         clearField();
@@ -48,12 +48,14 @@ function clearField() {
 function saveTodos() {
     var todos = [];
     todoList.querySelectorAll("li").forEach(function(entry) {
-        todos.push(entry.textContent.replace(" -", ""));
+        // Extracting the text content excluding the delete button
+        var todoText = entry.childNodes[0].textContent.trim();
+        todos.push(todoText);
     });
     localStorage.setItem("todos", JSON.stringify(todos));
 }
 
-// Add event listener for Enter key
+// Event listener for Enter key
 input.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
         addEntry();

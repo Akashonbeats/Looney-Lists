@@ -105,10 +105,13 @@ input{
     border: none;
     padding: 10px;
     border-radius: 5px;
+    transition-duration: 0.7s;
 }
 input:focus {
     outline: 2px dashed #1e93a7; /* Change the outline color */
     outline-offset: 0; /* Ensure the outline does not affect the element's size */
+    box-shadow: #1e93a7 0px 0px 30px;
+    transition-duration: 0.7s;
 }
 button{
     font-family: "Gloria Hallelujah", cursive;
@@ -127,6 +130,7 @@ button:hover{
     color: #1e93a7;
     outline: 2px dashed #1e93a7;
     outline-offset: 0;
+    box-shadow: #1e93a7 0px 0px 30px;
     transition-duration: 0.4s;
 }
 h3{
@@ -142,6 +146,8 @@ ul{
     list-style: none;
 }
 li{
+    display: flex;
+    align-items: center;
     font-size: 1.3rem;
     user-select: text;
     -webkit-user-select: text;
@@ -152,20 +158,27 @@ li{
     animation: cubic-bezier(0.68, -0.55, 0.27, 1.55) 1s slideinwards;
 }
 li::selection {
-    background: #1e93a7; /* Background color of the selection */
-    color: #fff9c7; /* Text color of the selection */
-    text-shadow: none; /* Optional: Removes text shadow if any */
+    background: #1e93a7;
+    color: #fff9c7;
   }
 li.removing {
     animation: cubic-bezier(0.68, -0.55, 0.27, 1.55) 1s slideoutwards;
 }
 li button{
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     height: 30px;
     width: 30px;
-    color: #1e93a7;
+    color: #1e92a77b;
     background-color: rgba(0, 255, 255, 0.237);
     user-select: none;
+    box-shadow: none !important;
     -webkit-user-select: none;
+}
+li button:hover{
+    color: #1e93a7;
 }
 footer{
     position: fixed;
