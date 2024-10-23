@@ -14,7 +14,7 @@ window.onload = function() {
         todoList.append(entry);
     });
 };
-
+/////////////////////////////////////////////////
 function addEntry() {
     var entry = document.createElement("li");
     h3.remove();
@@ -44,7 +44,7 @@ function deleteEntry(event) {
 function clearField() {
     input.value = "";
 }
-
+/////////////////////////////////////////////////
 function saveTodos() {
     var todos = [];
     todoList.querySelectorAll("li").forEach(function(entry) {
